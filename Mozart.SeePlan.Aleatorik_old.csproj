@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{ACF14516-A304-4AE5-93E6-F8E1F03CF242};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{374C09C3-BAC1-44F2-B330-D1A41EA88716}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mozart.SeePlan.Aleatorik</RootNamespace>
+    <AssemblyName>Mozart.SeePlan.Aleatorik</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <MozartBaseLibrary>SeePlan</MozartBaseLibrary>
+    <MozartProjectPrefix>Mozart</MozartProjectPrefix>
+    <MozartLicType>
+    </MozartLicType>
+    <MozartMakePkg>Aleatorik</MozartMakePkg>
+    <MozartGenerateProfiling>False</MozartGenerateProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;QD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;HY</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files (x86)\VMS\Mozart\Client\Bin\FP_Studio.exe</StartProgram>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mozart.Common, Version=2021.119.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Core, Version=2021.119.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data, Version=2021.119.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data.Entity, Version=2021.119.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.DataActions, Version=2021.119.0.6224, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.DataActions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Distributions, Version=2021.119.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Distributions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.RuleFlow, Version=2021.119.0.6224, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.RuleFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.SeePlan, Version=2021.119.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.SeePlan.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Simulation.Engine, Version=2021.119.0.6224, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Simulation.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Simulation.EnterpriseLibrary, Version=2021.119.0.6224, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Simulation.EnterpriseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Task.Execution, Version=2021.119.0.6224, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Task.Execution.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Task.Framework, Version=2021.119.0.6224, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Outputs\Mozart.Task.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="%28Agent%29\ATDummyAgent.cs" />
+    <Compile Include="%28Agent%29\ATResourceAgent.cs" />
+    <Compile Include="%28Helper%29\RefPlanHelper.cs" />
+    <Compile Include="%28Logic%29\MBSLogic.Planning.cs" />
+    <Compile Include="%28Manager%29\AllocateManager.cs" />
+    <Compile Include="%28Manager%29\IAllocateStrategy.cs" />
+    <Compile Include="%28Manager%29\ReserveInfo.cs" />
+    <Compile Include="%28Manager%29\ReserveManager.cs" />
+    <Compile Include="%28Manager%29\SetupManager.cs" />
+    <Compile Include="%28Predefines%29\Obo\CompareCapaInfoMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\CompareAdditionalBucketMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\CompareBucketOnBFSMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\CompareLotGroupOnBFSMethod.cs" />
+    <Compile Include="%28Summary%29\APEKpiSummary.cs" />
+    <Compile Include="APEPlanning\ATAssemblyAgent.cs" />
+    <Compile Include="%28Agent%29\ATConstraintAgent.cs" />
+    <Compile Include="%28Agent%29\ATISBQueueAgent.cs" />
+    <Compile Include="%28Agent%29\ATLateInfoTrackerAgent.cs" />
+    <Compile Include="%28Agent%29\ATPlanWipQueue.cs" />
+    <Compile Include="%28Agent%29\ATPlanWipQueueAgent.cs" />
+    <Compile Include="%28Helper%29\ATInputData.cs" />
+    <Compile Include="%28Helper%29\ConstraintHelper.cs" />
+    <Compile Include="%28Helper%29\SetupHelper.cs" />
+    <Compile Include="%28Logic%29\MBSLogic.Obo.cs" />
+    <Compile Include="%28Logic%29\Planning\PlanCommonLogic.cs" />
+    <Compile Include="%28Logic%29\RefPlanLogic.cs" />
+    <Compile Include="%28Logic%29\ShippingLogic.cs" />
+    <Compile Include="%28Predefines%29\Planning\CompareReleaseLotMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\FilterLotInPhaseMethod.cs" />
+    <Compile Include="AleatorikModel22.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AleatorikModel.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="APEPlanning\APELine.cs" />
+    <Compile Include="APEPlanning\Interface\AssemblyControl.cs" />
+    <Compile Include="APEPlanning\Interface\FactoryControl.cs" />
+    <Compile Include="APEPlanning\IAssemblyKey.cs" />
+    <Compile Include="Base\IConstraint.cs" />
+    <Compile Include="Base\IConstraintManager.cs" />
+    <Compile Include="Base\ILateTracker.cs" />
+    <Compile Include="Base\IPropertyObject.cs" />
+    <Compile Include="Base\ISetupProperty.cs" />
+    <Compile Include="Data\ATCapacity.cs" />
+    <Compile Include="Data\ATCapacityManager.cs" />
+    <Compile Include="Data\ATLateInfo.cs" />
+    <Compile Include="Data\ATLateInfoManager.cs" />
+    <Compile Include="Data\ATNonWorkingInfoManager.cs" />
+    <Compile Include="Data\ATOffTimeInfo.cs" />
+    <Compile Include="Data\ATPMInfo.cs" />
+    <Compile Include="Data\ATQtyCapacity.cs" />
+    <Compile Include="Data\ATReserveManager.cs" />
+    <Compile Include="Data\ATShortManager.cs" />
+    <Compile Include="Data\ATTimeCapacity.cs" />
+    <Compile Include="Data\ErrorHelper.cs" />
+    <Compile Include="Data\Pegger\ATPeggingGroup.cs" />
+    <Compile Include="Data\Pegger\ATTargetGroup.cs" />
+    <Compile Include="Data\Planning\ATConstraint.cs" />
+    <Compile Include="Data\Planning\ATConstraintDetail.cs" />
+    <Compile Include="Data\Planning\ATConstraintInfo.cs" />
+    <Compile Include="Data\Planning\APEPlanInfo.cs" />
+    <Compile Include="Data\ValidationFormat.cs" />
+    <Compile Include="Execution\Interface\ATOutputControl.cs" />
+    <Compile Include="ObyO\Data\OboBucket.cs" />
+    <Compile Include="Planner\Data\APESetupInfo.cs" />
+    <Compile Include="Data\Planning\ATNonWorkingInfo.cs" />
+    <Compile Include="Planner\%28Predefines%29\PBFPredefines.cs" />
+    <Compile Include="%28Predefines%29\Pegging\CompareRefPlanMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\FilterRefPlanMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\FilterArrangeInfoMethod.cs" />
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AleatorikDefSource.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AleatorikDefSource.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ATOperation.Planner.cs" />
+    <Compile Include="%28Agent%29\IAgent.cs" />
+    <Compile Include="Base\IFactorObject.cs" />
+    <Compile Include="ObyO\%28Predefines%29\PBOPredefines.cs" />
+    <Compile Include="ObyO\Interface\OboInitControl.cs" />
+    <Compile Include="Pegger\%28Predefines%29\PBBPredefines.cs" />
+    <Compile Include="Pegger\Interface\BWInitControl.cs" />
+    <Compile Include="Planner\Data\ATNonWorkingManager.cs" />
+    <Compile Include="Planner\Data\ATOffTimeManager.cs" />
+    <Compile Include="Planner\Data\ATOffTimePeriod.cs" />
+    <Compile Include="Planner\Data\PBFAllocationLog.cs" />
+    <Compile Include="Planner\Data\FWPhaseInfo.cs" />
+    <Compile Include="Planner\Data\PBFAllocateContext.BFS.cs" />
+    <Compile Include="Planner\Data\PBFAllocateContext.LFS.cs" />
+    <Compile Include="Planner\Data\ATPMManager.cs" />
+    <Compile Include="Planner\Data\ATPMPeriod.cs" />
+    <Compile Include="Planner\FWAllocator.cs" />
+    <Compile Include="Planner\FWAllocGroup.cs" />
+    <Compile Include="Planner\FWBucketGroup.cs" />
+    <Compile Include="Planner\FWEngine.Initialize.cs" />
+    <Compile Include="Planner\FWLine.cs" />
+    <Compile Include="Planner\FWLotGroup.cs" />
+    <Compile Include="Planner\Interface\FWAssemblyControl.cs" />
+    <Compile Include="Planner\Interface\FWInterface.cs" />
+    <Compile Include="ObyO\%28Agent%29\ReleaseAgent.cs" />
+    <Compile Include="ObyO\Data\OboAlignQueue.cs" />
+    <Compile Include="Planner\Interface\FWModuleControl.cs" />
+    <Compile Include="Planner\Data\FWBucket.cs" />
+    <Compile Include="Planner\Logic\FWRouteLogic.cs" />
+    <Compile Include="Preset\ATCompareRuleMethod.cs" />
+    <Compile Include="Preset\ATFactorMethod.ObyO.cs" />
+    <Compile Include="FENames.cs" />
+    <Compile Include="Generated\ModulePackage.cs" />
+    <Compile Include="InitModule\ATDataGenModule.cs" />
+    <Compile Include="InitModule\ATDataGenLogic.cs" />
+    <Compile Include="ObyO\Data\OboPhaseInfo.cs" />
+    <Compile Include="ObyO\Interface\OboDemandControl.cs" />
+    <Compile Include="ObyO\Interface\OboPlanControl.Allocate.cs" />
+    <Compile Include="ObyO\Interface\OboPlanControl.Assembly.cs" />
+    <Compile Include="Pegger\Data\BWPhaseInfo.cs" />
+    <Compile Include="Pegger\Interface\BWModuleControl.cs" />
+    <Compile Include="Pegger\Interface\BWInterface.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="AleatorikModel.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>AleatorikModel22.cs</LastGenOutput>
+    </None>
+    <Compile Include="%28Logic%29\OutputWriter.Obo.cs" />
+    <Compile Include="%28Predefines%29\Obo\FilterArrangeMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\FilterPegPartMethod.cs" />
+    <Compile Include="Data\ATOperation.Obo.cs" />
+    <Compile Include="Data\ATOperTarget.Obo.cs" />
+    <Compile Include="Base\IBucket.cs" />
+    <Compile Include="Data\Pegger\ATPegTarget.Obo.cs" />
+    <None Include="Main.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>Main.cs</LastGenOutput>
+    </None>
+    <Compile Include="Pegger\Interface\BWPeggerControl.cs" />
+    <Compile Include="Pegger\Interface\BWPeggerControl.Pegging.cs" />
+    <Compile Include="InitModule\Interface\ATInputControl.cs" />
+    <Compile Include="%28Logic%29\ObjectMapper.ObyO.cs" />
+    <Compile Include="Data\ATBuffer.Attribute.cs" />
+    <Compile Include="Data\ATDemand.Attribute.cs" />
+    <Compile Include="Data\ATPlanWip.Obo.cs" />
+    <Compile Include="Base\IDemand.cs" />
+    <Compile Include="Base\IDemandMaster.cs" />
+    <Compile Include="Base\IPegPart.cs" />
+    <Compile Include="Base\IPegTarget.cs" />
+    <Compile Include="Base\IWip.cs" />
+    <Compile Include="Data\Pegger\ATBinPegInfo.cs" />
+    <Compile Include="Data\Pegger\ATPegPart.Attribute.cs" />
+    <Compile Include="Data\Pegger\ATPegPart.Pegger.cs" />
+    <Compile Include="Data\Pegger\ATPegPart.Obo.cs" />
+    <Compile Include="Data\Pegger\ATRefPlan.cs" />
+    <Compile Include="Data\Pegger\ATSelectBomContext.cs" />
+    <Compile Include="Data\Planning\ATAssemblyInfo.cs" />
+    <Compile Include="Data\Planning\ATCapacityInfo.cs" />
+    <Compile Include="Execution\ModuleExecutionOption.cs" />
+    <Compile Include="Execution\ATDataContext.cs" />
+    <Compile Include="Execution\PBBModuleExecutionInfo.cs" />
+    <Compile Include="ObyO\%28Agent%29\OboArrangeManager.cs" />
+    <Compile Include="ObyO\%28Agent%29\OboAssyManager.cs" />
+    <Compile Include="ObyO\Interface\OboModuleControl.cs" />
+    <Compile Include="ObyO\Interface\OboInterfaces.cs" />
+    <Compile Include="ObyO\Interface\OboPlanControl.cs" />
+    <Compile Include="ObyO\Data\OboAllocContext.cs" />
+    <Compile Include="ObyO\Data\OboAssyInfo.cs" />
+    <Compile Include="ObyO\%28Agent%29\OboShortManager.cs" />
+    <Compile Include="ObyO\Data\OboCapaInfo.cs" />
+    <Compile Include="ObyO\Data\OboLot.cs" />
+    <Compile Include="Data\Planning\ATSplitInfo.cs" />
+    <Compile Include="ObyO\Logic\OboLogic.Compare.cs" />
+    <Compile Include="ObyO\Logic\OboLogic.cs" />
+    <Compile Include="ObyO\Logic\OboLogic.Peg.cs" />
+    <Compile Include="ObyO\OboAllocator.cs" />
+    <Compile Include="ObyO\OboEngine.cs" />
+    <Compile Include="Data\ATShortInfo.cs" />
+    <Compile Include="Execution\Interface\ATExecutionControl.cs" />
+    <Compile Include="ObyO\Interface\OboPegControl.cs" />
+    <Compile Include="Planner\Interface\FWAllocatorControl.cs" />
+    <Compile Include="Planner\Interface\FWBucketControl.cs" />
+    <Compile Include="Planner\Interface\FWFactoryControl.cs" />
+    <Compile Include="Execution\PBFModuleExecutionInfo.cs" />
+    <Compile Include="Execution\ATElapsedTimeChecker.cs" />
+    <Compile Include="Execution\ModuleExecutionInfo.cs" />
+    <Compile Include="Execution\ModuleExecutor.cs" />
+    <Compile Include="Execution\PBOModuleExecutionInfo.cs" />
+    <Compile Include="Execution\ATExecutionContext.cs" />
+    <Compile Include="%28Helper%29\AllocationGroupHelper.cs" />
+    <Compile Include="%28Helper%29\BomHelper.cs" />
+    <Compile Include="%28Helper%29\CalendarHelper.cs" />
+    <Compile Include="%28Helper%29\CommonHelper.cs" />
+    <Compile Include="%28Helper%29\CustomerHelper.cs" />
+    <Compile Include="%28Helper%29\DemandHelper.cs" />
+    <Compile Include="%28Helper%29\ItemBufferHelper.cs" />
+    <Compile Include="%28Helper%29\OperTargetHelper.cs" />
+    <Compile Include="%28Helper%29\RuleBuilder.cs" />
+    <Compile Include="%28Helper%29\RuleFactor.cs" />
+    <Compile Include="%28Helper%29\RuleFactorAttribute.cs" />
+    <Compile Include="Preset\ATRuleAgent.cs" />
+    <Compile Include="%28Helper%29\RuleManager.cs" />
+    <Compile Include="%28Helper%29\RulePointAttribute.cs" />
+    <Compile Include="%28Helper%29\LotHelper.cs" />
+    <Compile Include="%28Helper%29\ResourceHelper.cs" />
+    <Compile Include="%28Helper%29\WipHelper.cs" />
+    <Compile Include="ObyO\OboExecutionModule.cs" />
+    <Compile Include="ObyO\OboExecutor.cs" />
+    <Compile Include="ObyO\OboFactory.cs" />
+    <Compile Include="ObyO\OboFactory.Line.cs" />
+    <Compile Include="ObyO\Logic\OboLogic.Plan.cs" />
+    <Compile Include="Pegger\%28Agent%29\AlignBufferAgent.cs" />
+    <Compile Include="Pegger\BWLine.cs" />
+    <Compile Include="Pegger\Logic\PeggerLogic.cs" />
+    <Compile Include="Pegger\BWExecutionModule.cs" />
+    <Compile Include="Pegger\BWExecutor.cs" />
+    <Compile Include="Planner\Data\ATBucketReserveInfo.cs" />
+    <Compile Include="%28Summary%29\APEBufferPSISummary.cs" />
+    <Compile Include="ATConstants.cs" />
+    <Compile Include="ATEnum.cs" />
+    <Compile Include="%28Helper%29\ATPersistHelper.cs" />
+    <Compile Include="%28Logic%29\ObjectMapper.Planning.cs" />
+    <Compile Include="%28Logic%29\OutputWriter.Pegging.cs" />
+    <Compile Include="%28Logic%29\OutputWriter.Planning.cs" />
+    <Compile Include="Planner\Logic\AllocatorLogic.BucketFirst.cs" />
+    <Compile Include="Planner\Logic\AllocatorLogic.LotFirst.cs" />
+    <Compile Include="Planner\Logic\AssemblyLogic.cs" />
+    <Compile Include="Planner\%28Agent%29\APEAssemblyAgent.cs" />
+    <Compile Include="Planner\Logic\AllocatorLogic.cs" />
+    <Compile Include="Planner\Logic\AllocGroupLogic.cs" />
+    <Compile Include="Planner\Logic\FWComparer.cs" />
+    <Compile Include="Planner\Data\PBFAllocateContext.cs" />
+    <Compile Include="Data\Planning\ATSetupInfo.cs" />
+    <Compile Include="Planner\Data\Base\IAPELot.cs" />
+    <Compile Include="Planner\Data\Base\IAPEQueue.cs" />
+    <Compile Include="Planner\Interface\FWInitControl.cs" />
+    <Compile Include="Planner\Data\APENonWorkingPeriod.cs" />
+    <Compile Include="Data\Planning\APELot.Attribute.cs" />
+    <Compile Include="Data\Planning\APELot.cs" />
+    <Compile Include="APEPlanning\APEReleaseAgent.cs" />
+    <Compile Include="Data\Planning\APELot.Obo.cs" />
+    <Compile Include="Planner\%28Agent%29\APEWipAgent.cs" />
+    <Compile Include="Planner\FWWipQueue.cs" />
+    <Compile Include="%28Predefines%29\Pegging\FilterBomMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\CompareBucketMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\CompareLotGroupMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\CompareLotInGroupMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\FilterBucketMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\FilterLotGroupMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\FilterPlanWipMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\GetPeggingGroupKeyMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\GetPeggingKeyMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\GetPlanWipSetKeyMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\CompareBomMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\GetTargetGroupKeyMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\PlanningPredefines.cs" />
+    <Compile Include="%28Predefines%29\Planning\GetLotGroupKeyMethod.cs" />
+    <Compile Include="%28Predefines%29\Planning\ReleasePredefines.cs" />
+    <Compile Include="Data\ATBom.Attribute.cs" />
+    <Compile Include="Data\ATCustomer.cs" />
+    <Compile Include="Data\ATBomDetailAlt.cs" />
+    <Compile Include="Data\ATItemSiteBuffer.Attribute.cs" />
+    <Compile Include="Data\Pegger\ATPegPlanInfo.cs" />
+    <Compile Include="Data\Pegger\ATPegTarget.Pegger.cs" />
+    <Compile Include="%28Agent%29\ATISBQueue.cs" />
+    <Compile Include="Data\Pegger\ATSelectBomInfo.cs" />
+    <Compile Include="Data\Planning\ATArrange.cs" />
+    <Compile Include="Data\ATCalendarManager.cs" />
+    <Compile Include="Execution\ATOption.cs" />
+    <Compile Include="Data\ATInputErrorConfig.cs" />
+    <Compile Include="Data\Planning\ATResource.Attribute.cs" />
+    <Compile Include="Data\Planning\ATResourceGroup.cs" />
+    <Compile Include="%28Internal%29\ATDataManager.cs" />
+    <Compile Include="%28Helper%29\ATPropertyHelper.cs" />
+    <Compile Include="ATReservedCode.cs" />
+    <Compile Include="%28Internal%29\ATUtil.cs" />
+    <Compile Include="%28Internal%29\ATUtil.Date.cs" />
+    <Compile Include="%28Internal%29\ATUtil.Parse.cs" />
+    <Compile Include="%28Internal%29\ATDataModel.cs" />
+    <Compile Include="%28Internal%29\ATDataSet.cs" />
+    <Compile Include="%28Internal%29\KeyHelper.cs" />
+    <Compile Include="%28Logic%29\ObjectMapper.Pegging.cs" />
+    <Compile Include="%28Logic%29\OutputWriter.cs" />
+    <Compile Include="%28Logic%29\Pegging\Pegger.Compare.cs" />
+    <Compile Include="%28Logic%29\Pegging\PegCommonLogic.cs" />
+    <Compile Include="%28Predefines%29\Pegging\CompareTargetGroupMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\ComparePeggingGroupMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\CompareTargetMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\CompareWipMethod.cs" />
+    <Compile Include="%28Predefines%29\Pegging\FilterTargetGroupMethod.cs" />
+    <Compile Include="Data\ATBom.cs" />
+    <Compile Include="Data\ATBomDetail.cs" />
+    <Compile Include="Data\ATBomRouting.cs" />
+    <Compile Include="Data\ATCalendar.cs" />
+    <Compile Include="Data\ATCalendarAttribute.cs" />
+    <Compile Include="Data\ATCalendarDetail.cs" />
+    <Compile Include="Data\ABomNetwork.cs" />
+    <Compile Include="Data\ATOperTarget.cs" />
+    <Compile Include="Data\ATPlanWip.cs" />
+    <Compile Include="Data\Planning\ATResource.cs" />
+    <Compile Include="Data\ATRoute.cs" />
+    <Compile Include="Data\ATItem.cs" />
+    <Compile Include="Data\ATOperation.cs" />
+    <Compile Include="Data\ATSite.cs" />
+    <Compile Include="Base\BaseContext.cs" />
+    <Compile Include="%28Internal%29\ATProperty.cs" />
+    <Compile Include="Base\DynamicDictionary.cs" />
+    <Compile Include="Data\Pegger\ATPeggingContext.cs" />
+    <Compile Include="Data\Pegger\ATPlanWipGroup.cs" />
+    <Compile Include="Data\ATWipInfo.cs" />
+    <Compile Include="Data\Pegger\ATMoMaster.cs" />
+    <Compile Include="Data\Pegger\ATMoPlan.cs" />
+    <Compile Include="Data\ATDemand.cs" />
+    <Compile Include="Data\ATItemSiteBuffer.cs" />
+    <Compile Include="Execution\ATStage.cs" />
+    <Compile Include="%28Logic%29\ObjectMapper.InputPersist.cs" />
+    <Compile Include="AleatorikModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AleatorikModel.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ATBuffer.cs" />
+    <Compile Include="Data\Planning\ATAllocationGroup.cs" />
+    <Compile Include="Data\Pegger\ATPegPart.cs" />
+    <Compile Include="Data\Pegger\ATPegTarget.cs" />
+    <Compile Include="Data\Pegger\ATUnpegReason.cs" />
+    <Compile Include="Preset\ATFactorMethod.Planning.cs" />
+    <Compile Include="Preset\ATFactorValue.cs" />
+    <Compile Include="Preset\ATFactor.cs" />
+    <Compile Include="Preset\ATFilterValue.cs" />
+    <Compile Include="Preset\ATPresetEvaluator.cs" />
+    <Compile Include="Preset\ATRule.cs" />
+    <Compile Include="Preset\ATRuleSetConfig.cs" />
+    <Compile Include="Preset\ATRuleSet.cs" />
+    <Compile Include="Preset\ATScenarioRuleSetConfig.cs" />
+    <Compile Include="Preset\ATRuleSetConfigLog.cs" />
+    <Compile Include="Preset\ATWeightFactor.cs" />
+    <Compile Include="Preset\ATWeightPreset.cs" />
+    <Compile Include="Preset\ATFactorMethod.cs" />
+    <Compile Include="Generated\AleatorikModel.0.cs" />
+    <Compile Include="Generated\AleatorikModel.Inputs.cs" />
+    <Compile Include="Generated\AleatorikModel.Outputs.cs" />
+    <Compile Include="Generated\AleatorikModel.Persists.cs" />
+    <Compile Include="Generated\Main.0.cs" />
+    <Compile Include="Generated\My Objects.0.cs" />
+    <Compile Include="Generated\My Objects.DataModel.cs" />
+    <Compile Include="Planner\FWExecutionModule.cs" />
+    <Compile Include="Logic\Main.cs" />
+    <Compile Include="Logic\PersistInputs.cs" />
+    <Compile Include="Main.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="My Objects.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>My Objects.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="Planner\FWExecutor.cs" />
+    <Compile Include="Planner\FWFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="My Objects.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>My Objects.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AleatorikDefSource.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AleatorikDefSource.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="ATTableCreation.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)$(ProjectName).*" "..\..\..\..\..\Outputs\" /D /C /V /Y /R
+xcopy "$(TargetDir)$(ProjectName).*" "C:\ProgramData\Mozart\Execution\2022.122.1.4\" /D /C /V /Y /R
+xcopy "$(TargetDir)$(ProjectName).*" "C:\ProgramData\Mozart\Execution\2022.123.2.8\" /D /C /V /Y /R
+xcopy "$(TargetDir)$(ProjectName).*" "C:\ProgramData\Mozart\Execution\2022.123.2.11\" /D /C /V /Y /R</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

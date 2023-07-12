@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <NETFXTargetFramework>net472</NETFXTargetFramework>
+    <NETCoreTargetFramework>net6.0</NETCoreTargetFramework>	
+	<TargetFrameworks>$(NETCoreTargetFramework);$(NETFXTargetFramework)</TargetFrameworks>
+	
+    <LangVersion>latest</LangVersion>	
+    <MozartProjectType>Site</MozartProjectType>
+	
+    <MozartBaseLibrary>SeePlan</MozartBaseLibrary>
+    <MozartProjectPrefix>Mozart</MozartProjectPrefix>
+    <MozartLicType></MozartLicType>
+	<MozartMakePkg>Aleatorik</MozartMakePkg>
+	<MozartBaseLibraryVersion>2023.124.0.5</MozartBaseLibraryVersion>
+	<MozartStudioDir>C:\Program Files (x86)\VMS\Mozart\v2\Client\Bin\</MozartStudioDir>
+    <MozartNetcoreDir>C:\ProgramData\Mozart\v2\Executions.NetCore\$(MozartBaseLibraryVersion)\</MozartNetcoreDir>
+	<MozartNetfxDir>C:\ProgramData\Mozart\v2\Executions.NetFx\$(MozartBaseLibraryVersion)\</MozartNetfxDir>
+  
+	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>$(MozartStudioDir)$(MozartLicType)_Studio.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net472|AnyCPU'">
+    <DefineConstants>BUILD_PKG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net472|AnyCPU'">
+    <DefineConstants>BUILD_PKG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0|AnyCPU'">
+    <DefineConstants>BUILD_PKG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <DefineConstants>BUILD_PKG</DefineConstants>
+  </PropertyGroup> 
+
+  <ItemGroup>
+    <AssemblyMetadata Include="BaseLib" Value="$(MozartBaseLibrary)" />
+    <AssemblyMetadata Include="BaseLibVer" Value="$(MozartBaseLibraryVersion)" />
+  </ItemGroup>
+  
+
+  <Import Project="Mozart.Netcore.refs" />
+  <Import Project="Mozart.Netfx.refs" />
+  <ItemGroup>
+	<None Include="Mozart.Netcore.refs" />
+	<None Include="Mozart.Netfx.refs" />
+    <None Remove="Generated\Data\**" />
+    <None Remove="Generated\Experiment*\**" />
+    <None Remove="Generated\*.dll" />
+    <None Remove="Generated\*.pdb" />
+    <None Remove="Generated\*.vmodel" />
+    <None Remove="Generated\*.bak" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="AleatorikModel.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>AleatorikModel.cs</LastGenOutput>
+    </None>
+    <None Update="Main.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>Main.cs</LastGenOutput>
+    </None>
+     <None Update="My Objects.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>My Objects.cs</LastGenOutput>
+    </None>
+
+  </ItemGroup>
+  <ItemGroup>
+	<PackageReference Include="linq2db" Version="4.2.0" />
+	<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+	<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+	<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <ItemGroup>
+   <Compile Update="AleatorikDefSource.generated.cs">
+     <DesignTime>True</DesignTime>
+     <AutoGen>True</AutoGen>
+     <DependentUpon>AleatorikDefSource.tt</DependentUpon>
+     </Compile>
+    <Compile Update="AleatorikModel.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AleatorikModel.vxml</DependentUpon>
+    </Compile>
+    <Compile Update="Main.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Main.vxml</DependentUpon>
+    </Compile>
+    <Compile Update="My Objects.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>My Objects.vxml</DependentUpon>
+    </Compile>
+    <None Update="AleatorikDefSource.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AleatorikDefSource.generated.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

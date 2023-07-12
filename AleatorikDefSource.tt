@@ -1,0 +1,20 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#"               #>
+<#@ output extension=".generated.cs"                                     #>
+<#@ include file="$(ProjectDir)..\..\..\T4Templates\T4Model.ttinclude"       #>
+<#@ include file="$(ProjectDir)..\..\..\T4Templates\PackingSource.ttinclude" #>
+<#
+	
+	Model.Namespace.Name = "Mozart.SeePlan.Aleatorik";
+	
+	var cf = new CodeFile("AleatorikDefSource",
+			"PBFPredefines.cs"
+			);
+
+	//cf.Helpers.Add ("MyHelper.cs");
+
+	Model.Types.Add( cf );
+
+
+
+	GenerateModel();
+#>

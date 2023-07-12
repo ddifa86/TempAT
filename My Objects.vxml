@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vxml:Document xmlns:vxml="http://www.vms-solutions.com/mozart/vxml/2012/1" xmlns:def="definitions" xmlns:ref="references" ContentType="dataclass" ContentKey="My Objects" xmlns="Mozart.Task.Execution.Modeling, Version=2023.124.0.5, Culture=neutral, PublicKeyToken=null" xmlns:ctm="clr-namespace:Mozart.Task.Model;assembly:Mozart.Task.Model, Version=2023.124.0.5, Culture=neutral, PublicKeyToken=null" xmlns:cdm="clr-namespace:Mozart.DataActions.Metadata;assembly:Mozart.DataActions, Version=2023.124.0.5, Culture=neutral, PublicKeyToken=null">
+  <Content>
+    <FDataClassRoot Name="My Objects">
+      <Constants>
+        <FConstantItem Name="Constants">
+          <ArgumentArray>
+            <ctm:ArgumentInfo-Array />
+          </ArgumentArray>
+        </FConstantItem>
+      </Constants>
+      <Enums>
+        <FDataClassFolder Name="Enums">
+          <Children Capacity="16">
+            <FDataClassItem Name="CalendarPatternType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="CalendarPatternType" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Everyday" PropertyType="" />
+                    <cdm:PropertyMeta Name="DaysOfWeek" PropertyType="" />
+                    <cdm:PropertyMeta Name="EveryNDays" PropertyType="" />
+                    <cdm:PropertyMeta Name="DaysOfMonth" PropertyType="" />
+                    <cdm:PropertyMeta Name="Period" PropertyType="" />
+                    <cdm:PropertyMeta Name="None" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="CapacityMode" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="CapacityMode" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Infinite" PropertyType="" />
+                    <cdm:PropertyMeta Name="Finite" PropertyType="" />
+                    <cdm:PropertyMeta Name="None" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="ClassType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="ClassType" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Main" PropertyType="">
+                      <DefaultValue>
+                        <String>0</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                    <cdm:PropertyMeta Name="Sub" PropertyType="">
+                      <DefaultValue>
+                        <String>1</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="CycleTimeUnit" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="CycleTimeUnit" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Day" PropertyType="" />
+                    <cdm:PropertyMeta Name="Week" PropertyType="" />
+                    <cdm:PropertyMeta Name="Month" PropertyType="" />
+                    <cdm:PropertyMeta Name="Custom" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="ErrorType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="ErrorType" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="NullData" PropertyType="" />
+                    <cdm:PropertyMeta Name="InvalidData" PropertyType="" />
+                    <cdm:PropertyMeta Name="DuplicateKey" PropertyType="" />
+                    <cdm:PropertyMeta Name="ConfigError" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="ResourceType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="ResourceType" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Table" PropertyType="" />
+                    <cdm:PropertyMeta Name="Inline" PropertyType="" />
+                    <cdm:PropertyMeta Name="Batch" PropertyType="" />
+                    <cdm:PropertyMeta Name="Dummy" PropertyType="" />
+                    <cdm:PropertyMeta Name="None" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="UnpegCategory" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="UnpegCategory" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="InvalidData" PropertyType="" />
+                    <cdm:PropertyMeta Name="Remain" PropertyType="" />
+                    <cdm:PropertyMeta Name="Custom" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="UomTypes" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="UomTypes" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Week" PropertyType="" />
+                    <cdm:PropertyMeta Name="Day" PropertyType="" />
+                    <cdm:PropertyMeta Name="Shift" PropertyType="" />
+                    <cdm:PropertyMeta Name="Hour" PropertyType="" />
+                    <cdm:PropertyMeta Name="Minute" PropertyType="" />
+                    <cdm:PropertyMeta Name="Sec" PropertyType="" />
+                    <cdm:PropertyMeta Name="None" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="WipType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="WipType" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Wip" PropertyType="" />
+                    <cdm:PropertyMeta Name="Inventory" PropertyType="" />
+                    <cdm:PropertyMeta Name="Intransit" PropertyType="" />
+                    <cdm:PropertyMeta Name="Dummy" PropertyType="" />
+                    <cdm:PropertyMeta Name="None" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="WriteType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="WriteType" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Setup" PropertyType="" />
+                    <cdm:PropertyMeta Name="Allocation" PropertyType="" />
+                    <cdm:PropertyMeta Name="Constraint" PropertyType="" />
+                    <cdm:PropertyMeta Name="NonWorking" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="RulePoint" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="RulePoint" ToStringExpr="">
+                  <Properties>
+                    <cdm:PropertyMeta Name="None" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareWip" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareTargetGroup" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareTargetInGroup" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterTargetGroup" PropertyType="" />
+                    <cdm:PropertyMeta Name="ComparePeggingGroup" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareBom" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterBom" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareRoute" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareSite" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterWip" PropertyType="" />
+                    <cdm:PropertyMeta Name="WipKey" PropertyType="" />
+                    <cdm:PropertyMeta Name="PeggingKey" PropertyType="" />
+                    <cdm:PropertyMeta Name="TargetGroupKey" PropertyType="" />
+                    <cdm:PropertyMeta Name="PeggingGroupKey" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareResourceOnLFS" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareLotGroupOnLFS" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterResourceOnLFS" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterLotGroupOnLFS" PropertyType="" />
+                    <cdm:PropertyMeta Name="LotGroupKey" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareLotInGroup" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareAssemblyPart" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterTarget" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterOperResource" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterCapacity" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareCapacity" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterRefProdPlan" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareRefProdPlan" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareLot" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterLot" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterLotGroupInLevel" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareAddResource" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareResourceOnRFS" PropertyType="" />
+                    <cdm:PropertyMeta Name="CompareLotGroupOnRFS" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterResourceOnRFS" PropertyType="" />
+                    <cdm:PropertyMeta Name="FilterLotGroupOnRFS" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+          </Children>
+        </FDataClassFolder>
+      </Enums>
+    </FDataClassRoot>
+  </Content>
+</vxml:Document>

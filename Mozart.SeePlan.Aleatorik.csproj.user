@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments> -model:"D:\Mozart\Seeplan\Mozart.SeePlan.Aleatorik\Mozart.SeePlan.Aleatorik\Generated\AleatorikModel.vmodel" -dev -noauth</StartArguments>
+    <StartProgram>C:\Program Files %28x86%29\VMS\Mozart\Client\Bin\MP_Studio.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartArguments> -model:"D:\Mozart\Seeplan\Mozart.SeePlan.Aleatorik\Mozart.SeePlan.Aleatorik\Generated\AleatorikModel.vmodel" -dev -noauth</StartArguments>
+  </PropertyGroup>
+</Project>

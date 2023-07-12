@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Mozart.SeePlan.Aleatorik": {
+      "commandName": "Project",
+      "commandLineArgs": " -model:\"D:\\Aleatorik\\Mozart.SeePlan.Aleatorik\\Mozart.SeePlan.Aleatorik\\Generated\\AleatorikModel.vmodel\"  -dev  -noauth",
+      "nativeDebugging": true
+    },
+    "프로필 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files (x86)\\VMS\\Mozart\\v2\\Client\\Bin\\MP_Studio.exe",
+      "nativeDebugging": true
+    }
+  }
+}

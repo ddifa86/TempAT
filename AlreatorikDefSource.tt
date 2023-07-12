@@ -1,0 +1,45 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#"               #>
+<#@ output extension=".generated.cs"                                     #>
+<#@ include file="$(ProjectDir)..\..\..\T4Templates\T4Model.ttinclude"       #>
+<#@ include file="$(ProjectDir)..\..\..\T4Templates\PackingSource.ttinclude" #>
+<#
+	
+	Model.Namespace.Name = "Mozart.SeePlan.Aleatorik";
+
+	var cf = new CodeFile("AleatorikDefSource",
+			"CompareArrangeMethod.cs", //oby
+			"FilterArrangeMethod.cs", 
+			"CompareBomMethod.cs", //pegging
+			"ComparePeggingGroupMethod.cs", 
+			"ComparePegPartMethod.cs", 
+			"CompareTargetGroupMethod.cs",
+			"CompareTargetMethod.cs", 
+			"CompareWipMethod.cs", 
+			"FilterBomMethod.cs",
+			"FilterPegPartMethod.cs", 
+			"FilterPlanWipMethod.cs", 
+			"FilterTargetGroupMethod.cs",
+			"GetMoMasterKeyMethod.cs",
+			"GetPeggingGroupKeyMethod.cs",
+			"GetPeggingKeyMethod.cs",
+			"GetPlanWipSetKeyMethod.cs",
+			"GetTargetGroupKeyMethod.cs",
+			"PlanningPredefines.cs",
+			"CompareAssemblyLotMethod.cs",//planning
+			"CompareBucketMethod.cs",
+			"CompareLotGroupMethod.cs",
+			"CompareLotInGroupMethod.cs",
+			"FilterBucketMethod.cs",
+			"FilterLotGroupMethod.cs",
+			"GetLotGroupKeyMethod.cs",
+			"ReleasePredefines.cs"
+			);
+
+	//cf.Helpers.Add ("MyHelper.cs");
+
+	Model.Types.Add( cf );
+
+
+
+	GenerateModel();
+#>
